@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/test/"
+	targetNamespace="http://www.example.org/test/"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	jaxb:extensionBindingPrefixes="xjc"
+	jaxb:version="2.0">
+	
+	<annotation>
+		<appinfo>
+			<jaxb:globalBindings>
+       			<xjc:serializable uid="12343"/>
+   			</jaxb:globalBindings>				
+        </appinfo>
+	</annotation>
+
+	<complexType name="TypeA">
+	</complexType>
+
+	<complexType name="TypeB">
+		<complexContent>
+			<extension base="tns:TypeA">
+				<sequence>
+					<element name="fieldBa" type="int"/>
+					<element name="fieldBb" type="int" default="0"/>
+					<element name="fieldBc" type="int" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+				<attribute name="fieldB1" type="string"/>
+				<attribute name="fieldB2" type="string"
+					fixed="fixedValue">
+					<annotation>
+						<appinfo>
+							<jaxb:property fixedAttributeAsConstantProperty="true" />
+		          		</appinfo>
+					</annotation>
+				</attribute>
+				<attribute name="fieldB3" type="string" use="optional" default="default" />
+				<attribute name="fieldB4" type="string" use="required"/>
+				<attribute name="fieldB5" type="string" use="prohibited"/>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="TypeC">
+		<complexContent>
+			<extension base="tns:TypeB">
+				<sequence>
+					<element name="fieldCa" type="int"/>
+					<element name="fieldCb" type="int" default="0"/>
+					<element name="fieldCc" type="string" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+				<attribute name="fieldC1" type="string"/>
+				<attribute name="fieldC2" type="string"
+					fixed="fixedValueC2">
+					<annotation>
+						<appinfo>
+							<jaxb:property fixedAttributeAsConstantProperty="true" />
+		          		</appinfo>
+					</annotation>
+				</attribute>
+				<attribute name="fieldC3" type="string" use="optional" default="default" />
+				<attribute name="fieldC4" type="string" use="required"/>
+				<attribute name="fieldC5" type="string" use="prohibited"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="TypeD">
+		<sequence>
+			<element name="fieldDa" type="anySimpleType"/>
+		</sequence>
+		<attribute name="fieldD1" use="required"/>
+	</complexType>
+	
+</schema>
