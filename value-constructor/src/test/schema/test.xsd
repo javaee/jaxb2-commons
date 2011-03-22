@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/test/"
+	targetNamespace="http://www.example.org/test/"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	jaxb:extensionBindingPrefixes="xjc"
+	jaxb:version="2.0">
+	
+	<annotation>
+		<appinfo>
+			<jaxb:globalBindings>
+       			<xjc:serializable uid="12343"/>
+   			</jaxb:globalBindings>				
+        </appinfo>
+	</annotation>
+
+	<complexType name="TypeA">
+	</complexType>
+
+	<complexType name="TypeB">
+		<complexContent>
+			<extension base="tns:TypeA">
+				<attribute name="fieldB1" type="string"/>
+				<attribute name="fieldB2" type="string"
+					fixed="fixedValue">
+					<annotation>
+						<appinfo>
+							<jaxb:property fixedAttributeAsConstantProperty="true" />
+		          		</appinfo>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="TypeC">
+		<complexContent>
+			<extension base="tns:TypeB">
+				<sequence></sequence>
+				<attribute name="fieldC1" type="string"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+</schema>
