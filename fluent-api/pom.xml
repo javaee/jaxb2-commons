@@ -25,7 +25,6 @@
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-
   
 	<licenses>
 		<license>
