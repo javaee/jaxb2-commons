@@ -1,47 +1,77 @@
 <project 
-    xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
->
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jvnet.jaxb2_commons</groupId>
-    <artifactId>jaxb2-fluent-api</artifactId>
-    <packaging>jar</packaging>
-    <version>2.2</version>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jvnet.jaxb2_commons</groupId>
+	<artifactId>jaxb2-fluent-api</artifactId>
+	<packaging>jar</packaging>
 
-    <name>JAXB2 Commons - Fluent API Plugin</name>
-    <description>
-        Causes JAXB RI 2.2 XJC to generate additional methods that allows method chaining.
-        Method chaining is useful when building object tree in memory, allowing the code 
-        to be done in a concise way. The code that uses this plugin can still run with any
-        JAXB2 implementation.
-    </description>
+	<version>3.0-SNAPSHOT</version>
+
+	<name>JAXB2 Commons - Fluent API Plugin</name>
+
+	<url>http://java.net/projects/jaxb2-commons/pages/fluent-api</url>
+
+	<description>
+		Causes JAXB RI 2 XJC to generate additional methods that allows method chaining.
+		Method chaining is useful when building object tree in memory, allowing the code 
+		to be done in a concise way. The code that uses this plugin can still run with any
+		JAXB2 implementation.
+	</description>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
   
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    
-    <scm>
-        <url>http://java.net/projects/jaxb2-commons/sources/svn/show/fluent-api</url>
-    </scm>
-    
-    <dependencies>
-        <dependency>  
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>2.1.8</version>
-        </dependency>  
-    </dependencies>
-    
-    <build>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Hanson Char</name>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</developerConnection>
+		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/fluent-api/trunk</url>
+	</scm>
+	
+	<dependencies>
+		<dependency>  
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.1.13</version>
+			<scope>provided</scope>
+		</dependency>  
+	</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<inherited>true</inherited>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.5</source>
+						<target>1.5</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
 				<executions>
 					<execution>
 						<id>attach-source</id>
@@ -52,6 +82,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-    </build>
+	</build>
 
 </project>
