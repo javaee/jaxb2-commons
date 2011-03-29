@@ -1,10 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.jvnet.jaxb2_commons</groupId>
 	<artifactId>jaxb2-fluent-api</artifactId>
 	<packaging>jar</packaging>
 
-	<version>3.0</version>
+	<version>3.0-SNAPSHOT</version>
 
 	<name>JAXB2 Commons - Fluent API Plugin</name>
 
@@ -44,9 +47,9 @@
     </contributors>
 
 	<scm>
-		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/tags/3.0</connection>
-		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/tags/3.0</developerConnection>
-		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/fluent-api/tags/3.0</url>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</developerConnection>
+		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/fluent-api/trunk</url>
 	</scm>
 	
 	<dependencies>
