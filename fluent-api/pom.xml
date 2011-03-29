@@ -39,7 +39,13 @@
 			<name>Hanson Char</name>
 		</developer>
 	</developers>
-	
+
+    <contributors>
+        <contributor>
+            <name>Eirik Lygre</name>
+        </contributor>
+    </contributors>
+
 	<scm>
 		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</connection>
 		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/fluent-api/trunk</developerConnection>
