@@ -4,7 +4,7 @@
 	<artifactId>jaxb2-default-value</artifactId>
 	<packaging>jar</packaging>
 
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 
 	<name>JAXB2 Commons - Default Value Plugin</name>
 
@@ -44,9 +44,9 @@
 	</contributors>
 
 	<scm>
-		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/default-value-plugin/trunk</connection>
-		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/default-value-plugin/trunk</developerConnection>
-		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/default-value-plugin/trunk</url>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/default-value-plugin/tags/jaxb2-default-value-1.1</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/default-value-plugin/tags/jaxb2-default-value-1.1</developerConnection>
+		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/default-value-plugin/tags/jaxb2-default-value-1.1</url>
 	</scm>
 	
 	<dependencies>
