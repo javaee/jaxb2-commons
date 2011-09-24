@@ -4,7 +4,7 @@
 	<artifactId>jaxb2-commons-lang</artifactId>
 	<packaging>jar</packaging>
 
-	<version>2.2-SNAPSHOT</version>
+	<version>2.2</version>
 
 	<name>JAXB2 Commons - Fluent API Plugin</name>
 
@@ -44,9 +44,9 @@
 	</contributors>
 
 	<scm>
-		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/commons-lang-plugin/trunk</connection>
-		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/commons-lang-plugin/trunk</developerConnection>
-		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/commons-lang-plugin/trunk</url>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/commons-lang-plugin/tags/jaxb2-commons-lang-2.2</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/commons-lang-plugin/tags/jaxb2-commons-lang-2.2</developerConnection>
+		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/commons-lang-plugin/tags/jaxb2-commons-lang-2.2</url>
 	</scm>
 	
 	<dependencies>
