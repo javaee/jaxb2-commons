@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.jvnet.jaxb2_commons</groupId>
+	<artifactId>jaxb2-value-constructor</artifactId>
+	<packaging>jar</packaging>
+	<version>3.1-SNAPSHOT</version>
+	
+	<name>JAXB2 Commons - Value Constructor Plugin</name>
+
+	<url>http://java.net/projects/jaxb2-commons/pages/value-constructor</url>
+
+	<description>
+		Causes JAXB RI 2 XJC to generate a value constructor, where each embedded element
+		is included as a constructor parameter. This is usedful when you want to make sure
+		that you have handled every single possible embedded element. The plugin also
+		generates a default (no argument) constructor, so existing code runs as expected.
+	</description>
+
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Kenny MacLeod</name>
+		</developer>
+	</developers>
+
+    <contributors>
+        <contributor>
+            <name>Eirik Lygre</name>
+        </contributor>
+    </contributors>
+
+	<scm>
+		<connection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/value-constructor/trunk</connection>
+		<developerConnection>scm:svn:https://svn.java.net/svn/jaxb2-commons~svn/value-constructor/trunk</developerConnection>
+		<url>http://java.net/projects/jaxb2-commons/sources/svn/show/value-constructor/trunk</url>
+	</scm>
+
+	<dependencies>
+		<dependency>  
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.1.13</version>
+			<scope>provided</scope>
+		</dependency>  
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<inherited>true</inherited>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.5</source>
+						<target>1.5</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-source</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
