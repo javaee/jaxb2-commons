@@ -4,7 +4,8 @@
 	<artifactId>jaxb2-fluent-api</artifactId>
 	<packaging>jar</packaging>
 
-	<version>3.1-SNAPSHOT</version>
+	<version>4.0.0-SNAPSHOT</version>
+<!--	<version>3.1-SNAPSHOT</version>-->
 
 	<name>JAXB2 Commons - Fluent API Plugin</name>
 
@@ -50,23 +51,24 @@
 	</scm>
 	
 	<dependencies>
-		<dependency>  
-			<groupId>com.sun.xml.bind</groupId>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-xjc</artifactId>
-			<version>2.1.13</version>
+			<version>3.0.2</version>
 			<scope>provided</scope>
-		</dependency>  
+		</dependency>
 	</dependencies>
 	
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<version>3.10.1</version>
 					<inherited>true</inherited>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.5</source>
-						<target>1.5</target>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -74,6 +76,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.0</version>
 				<executions>
 					<execution>
 						<id>attach-source</id>
